@@ -15,8 +15,27 @@ export default [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          'script-src': ['https://cdn.ckeditor.com'],
-          'connect-src': ['https://proxy-event.ckeditor.com']
+          'script-src': [
+            "'self'",
+            'https://cdn.ckeditor.com',
+            'https://glorious-triumph-f1bbe1b0db.strapiapp.com'
+          ],
+          'connect-src': [
+            "'self'",
+            'https://proxy-event.ckeditor.com'
+          ],
+          'img-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'https://glorious-triumph-f1bbe1b0db.strapiapp.com'
+          ],
+          'media-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'https://glorious-triumph-f1bbe1b0db.strapiapp.com'
+          ],
         },
       },
     },
