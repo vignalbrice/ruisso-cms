@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "image_assets",
+  "info": {
+    "singularName": "image-asset",
+    "pluralName": "image-assets",
+    "displayName": "ImageAsset"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "alt": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "blocks"
+    },
+    "annotations": {
+      "type": "json"
+    },
+    "label": {
+      "type": "component",
+      "component": "tag.tags",
+      "repeatable": true
+    }
+  }
+}
